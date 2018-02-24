@@ -3,6 +3,27 @@
 }
 .dashboard-wrapper .dashboard-nav{}
 .dashboard-wrapper .dashboard-nav .navbar{
-  background-color: #2B19AF;
+  /*background-color: #2B19AF;*/
+  background: linear-gradient(to right, #2B19AF, #812FE8);
+  color: #ffffff;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  min-height:50px;
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-brand{
+  color: #812FE8;
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item{
+  border-left: 1px solid #dddddd;
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item button{
+  height: 50px;
+  min-width:70px;
+  padding: 0;
+  background-color: rgba(0,0,0,.12);
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item button i{
+  font-size: 30px;
 }
 

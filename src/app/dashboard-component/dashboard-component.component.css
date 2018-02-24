@@ -1,0 +1,8 @@
+.dashboard-wrapper{
+  min-height: 100vh;
+}
+.dashboard-wrapper .dashboard-nav{}
+.dashboard-wrapper .dashboard-nav .navbar{
+  background-color: #2B19AF;
+}
+

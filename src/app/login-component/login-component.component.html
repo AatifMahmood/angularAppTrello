@@ -1,0 +1,52 @@
+<div class="row m-0">
+  <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4 m-auto">
+    <div class="loginContainer">
+      <div class="login-header">
+        LOGIN
+      </div>
+      <div class="login-body">
+        <form class="">
+          <div class="row m-0">
+            <mat-form-field class="col-12">
+              <input matInput placeholder="Enter Username" value="">
+            </mat-form-field>
+            <mat-form-field class="col-12">
+              <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter Password" value="">
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </mat-form-field>
+            <mat-checkbox class="col-12 col-sm-6" color="primary">Remember me</mat-checkbox>
+            <div class="col-12 col-sm-6 text-right">
+              <button mat-raised-button color="primary">LOGIN</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="login-divider">
+        <div class="row m-0">
+          <div class="col-4 col-md-5 login-divider-line"><span></span></div>
+          <div class="col-4 col-md-2 text-center">OR</div>
+          <div class="col-4 col-md-5 login-divider-line"><span></span></div>
+        </div>
+      </div>
+      <div class="login-social">
+        <div class="row m-0">
+          <div class="col-12 text-center">
+            <div class="login-social-button text-center">
+              <ul>
+                <li><button class="facebook" mat-mini-fab color="primary"><i class="fab fa-facebook-f fa-2x"></i></button></li>
+                <li><button class="twitter" mat-mini-fab color="primary"><i class="fab fa-twitter fa-2x"></i></button></li>
+                <li><button class="google" mat-mini-fab color="primary"><i class="fab fa-google fa-2x"></i></button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login-footer">
+        <div class="row m-0">
+          <div class="col-12 col-sm-6 mr-auto text-center"><button mat-button>Forgot Password ?</button></div>
+          <div class="col-12 col-sm-4 ml-auto text-center"><button mat-button>Signup</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

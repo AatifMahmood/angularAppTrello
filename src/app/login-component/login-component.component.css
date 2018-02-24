@@ -1,0 +1,93 @@
+.loginContainer{
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-top: 100px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+}
+.loginContainer .login-header{
+  padding: 10px 15px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #2B19AF, #812FE8);
+}
+.loginContainer .login-body{
+  padding: 10px 0;
+}
+.loginContainer .login-body button{
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/deep/ .mat-form-field-prefix,/deep/ .mat-form-field-suffix{
+  cursor: pointer;
+}
+.loginContainer .login-body /deep/ .mat-raised-button{
+  background-color: #2B19AF;
+}
+.loginContainer .login-divider{
+  font-size: 20px;
+  color:#2B19AF;
+  font-weight: bold;
+}
+.loginContainer .login-divider .login-divider-line{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.loginContainer .login-divider .login-divider-line span{
+  height: 1px;
+  width: 100%;
+  background-color: #dddddd;
+}
+.loginContainer .login-social{}
+.loginContainer .login-social .login-social-text{
+  font-weight: bold;
+  padding: 10px 0 5px 0;
+}
+.loginContainer .login-social .login-social-button button{
+  border:2px solid transparent;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+}
+.loginContainer .login-social .login-social-button button.facebook{
+  background-color: #3b5998;
+}
+.loginContainer .login-social .login-social-button button.twitter{
+  background-color: #55acee;
+}
+.loginContainer .login-social .login-social-button button.google{
+  background-color: #dd4b39;
+}
+.loginContainer .login-social .login-social-button button:hover{
+  background-color: #2B19AF;
+  border-color: #2B19AF;
+  color: #ffffff;
+}
+.loginContainer .login-social .login-social-button ul{
+  padding: 0;
+  list-style-type: none;
+}
+.loginContainer .login-social .login-social-button ul li{
+  display: inline-block;
+}
+.loginContainer .login-footer{
+  padding:0;
+  border-top:1px solid #dddddd;
+  color: #2B19AF;
+}
+.loginContainer .login-footer button{
+  font-weight: bold;
+}
+.loginContainer .login-footer button:hover{
+  text-decoration: underline;
+}
+.loginContainer .login-footer /deep/ .mat-button:hover .mat-button-focus-overlay{
+  background-color:transparent;
+}

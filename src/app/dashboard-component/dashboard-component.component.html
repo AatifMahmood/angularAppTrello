@@ -1,37 +1,44 @@
 
+<mat-drawer-container class="dashboard-container" autosize>
+  <mat-drawer #drawer class="col-12 col-md-6 col-lg-3 p-0" mode="over" position="end">
+  <div class="dashboard-sidenav-close text-right">
+    <button (click)="drawer.toggle()" mat-button><i class="material-icons">clear</i></button>
+  </div>
+  <div class="dashboard-sidenav-profile text-center">
+    <ul class="p-0">
+      <li><img src="./assets/images/profile.jpg" alt="profile" class="img-fluid"></li>
+      <li>Aatif Mahmood</li>
+    </ul>
+  </div>
+  </mat-drawer>
 
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="col-12 col-md-6 col-lg-3" mode="over" position="end">
-      <p>Auto-resizing sidenav</p>
-    </mat-drawer>
+  <div class="row m-0">
+    <div class="dashboard-wrapper col-12 p-0">
+      <div class="dashboard-nav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">KANBAN</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <div class="row m-0">
-      <div class="dashboard-wrapper col-12 p-0">
-        <div class="dashboard-nav">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">KANBAN</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <button mat-button><i class="material-icons">explore</i></button>
-                </li>
-                <li class="nav-item">
-                  <button mat-button><i class="material-icons">mail_outline</i></button>
-                </li>
-                <li class="nav-item">
-                  <button mat-button (click)="drawer.toggle()"><i class="material-icons">account_circle</i></button>
-                </li>
-                <li class="nav-item">
-                  <button mat-button><i class="material-icons">exit_to_app</i></button>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <button mat-button><i class="material-icons">explore</i></button>
+              </li>
+              <li class="nav-item">
+                <button mat-button><i class="material-icons">mail_outline</i></button>
+              </li>
+              <li class="nav-item">
+                <button mat-button (click)="drawer.toggle()"><i class="material-icons">account_circle</i></button>
+              </li>
+              <li class="nav-item">
+                <button mat-button><i class="material-icons">exit_to_app</i></button>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
+  </div>
 </mat-drawer-container>

@@ -1,7 +1,8 @@
 .dashboard-container{
-  min-height: 100vh;
+  height: 100vh;
   /*background: linear-gradient(#2B19AF, #812FE8);*/
   background-color: #F5F5F5;
+  overflow:hidden;
 }
 .dashboard-container /deep/ .mat-drawer-backdrop.mat-drawer-shown{
   background: #ffffff;
@@ -15,6 +16,7 @@
   top:50%;
   left:-30px;
   background-color: transparent;
+  z-index:10;
 }
 .dashboard-container .dashboard-leftDrawer-toggler button {
   padding: 0;
@@ -28,7 +30,11 @@
 .dashboard-container .dashboard-leftDrawer-toggler /deep/ .mat-button-wrapper{
   padding:0;
 }
-.dashboard-wrapper .dashboard-nav{}
+.dashboard-wrapper{
+  overflow-y: auto;
+  max-height: 100vh;
+  padding: 50px 0;
+}
 .dashboard-wrapper .dashboard-nav .navbar{
   /*background: linear-gradient(to right, #2B19AF, #812FE8);*/
   background-color: #ffffff;
@@ -81,7 +87,7 @@
   background-color: #ffffff;
   width: 100%;
   padding: 0 10px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   box-shadow: 0 2px 2px 2px rgba(0,0,0,.2);
 }

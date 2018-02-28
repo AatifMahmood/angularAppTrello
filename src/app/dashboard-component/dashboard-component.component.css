@@ -1,64 +1,92 @@
-.dashboard-container{}
-.dashboard-container .dashboard-sidenav-close button{
-  color: #2B19AF;
-  padding: 0;
-  min-width: 50px;
-  font-weight:bold;
-  border-radius: 0;
-}
-.dashboard-container .dashboard-sidenav-close button i{
-  font-size: 30px;
-}
-.dashboard-container .dashboard-sidenav-profile {
-  padding-bottom: 10px;
-}
-.dashboard-container .dashboard-sidenav-profile ul{
-  list-style-type: none;
-}
-.dashboard-container .dashboard-sidenav-profile ul li{
-  font-weight: bold;
-  color: #000000;
-  padding: 5px;
-}
-.dashboard-container .dashboard-sidenav-profile ul li:first-child{
-  margin: 5px auto;
-  max-width: 100px;
-  max-height:100px;
-  border-radius: 100%;
-  overflow: hidden;
-  padding: 0;
-}
-.dashboard-container .dashboard-sidenav-profile ul li:first-child img{
-  width:100%;
-  height:100%;
-  border-radius: 100%;
-}
-.dashboard-wrapper{
+.dashboard-container{
   min-height: 100vh;
+  /*background: linear-gradient(#2B19AF, #812FE8);*/
+  background-color: #F5F5F5;
+}
+.dashboard-container /deep/ .mat-drawer-backdrop.mat-drawer-shown{
+  background: #ffffff;
+}
+.dashboard-container .dashboard-drawer-container{
+  background: linear-gradient(#812FE8,#2B19AF);
+}
+.dashboard-container .dashboard-leftDrawer{}
+.dashboard-container .dashboard-leftDrawer-toggler{
+  position: absolute;
+  top:50%;
+  left:-30px;
+  background-color: transparent;
+}
+.dashboard-container .dashboard-leftDrawer-toggler button {
+  padding: 0;
+  background-color: #812FE8;
+  color: #ffffff;
+}
+.dashboard-container .dashboard-leftDrawer-toggler button i{
+  font-size: 40px;
+  padding-left: 20px;
+}
+.dashboard-container .dashboard-leftDrawer-toggler /deep/ .mat-button-wrapper{
+  padding:0;
 }
 .dashboard-wrapper .dashboard-nav{}
 .dashboard-wrapper .dashboard-nav .navbar{
-  /*background-color: #2B19AF;*/
-  background: linear-gradient(to right, #2B19AF, #812FE8);
-  color: #ffffff;
+  /*background: linear-gradient(to right, #2B19AF, #812FE8);*/
+  background-color: #ffffff;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 0;
   min-height:50px;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 .dashboard-wrapper .dashboard-nav .navbar .navbar-brand{
   color: #812FE8;
-}
-.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item{
-  border-left: 1px solid #dddddd;
 }
 .dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item button{
   height: 50px;
   min-width:70px;
   padding: 0;
-  background-color: rgba(0,0,0,.12);
+  color: #812FE8;
+  border-radius: 0;
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item button /deep/ .mat-button-focus-overlay{
+  background-color: rgba(0,0,0,.05);
 }
 .dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item button i{
   font-size: 30px;
 }
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item{
+  border-left: 1px solid #dddddd;
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item.dashboard-nav-navbar-input{
+  border:1px solid #dddddd;
+  border-radius: 50px;
+  max-height: 36px;
+  margin: 7px;
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item.dashboard-nav-navbar-input span{
+  display: inline-block;
+  color: #812FE8;
+  position: relative;
+  top:5px;
+  left:5px;
+}
+.dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item.dashboard-nav-navbar-input input{
+  border:none;
+  font-size:22px;
+  background-color: transparent;
+  padding: 0 5px;
+}
 
+.dashboard-footer{
+  background-color: #ffffff;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,.2);
+}
+.dashboard-footer ul li{
+  padding:5px;
+  border-right: 1px solid #dddddd;
+  font-size: 11px;
+}

@@ -1,0 +1,51 @@
+.app-boards-container{
+  margin: 50px 0;
+  background-color: #ffffff;
+}
+.app-boards-container .app-personal-board{
+}
+.app-boards-container .app-personal-board .app-personal-board-header{
+  font-weight:bold;
+  font-size: 18px;
+  border-bottom: 1px solid #F5F5F5;
+}
+.app-boards-container .app-personal-board .app-personal-board-header h3{
+  font-size: 20px;
+  padding: 5px 10px;
+  border-left: 5px solid #812FE8;
+  margin:0;
+}
+.app-boards-container .app-personal-board .app-personal-board-body{
+  padding: 20px;
+}
+.app-boards-container .app-personal-board .app-personal-board-body .app-personal-board-box{
+  border-radius: 5px;
+  color: #ffffff;
+  background: linear-gradient(to right,#812FE8,#2B19AF);
+  min-height: 100px;
+  margin: 0 0 30px 0;
+  transition: .2s all;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.app-boards-container .app-personal-board .app-personal-board-body .app-personal-board-box:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.app-boards-container .app-personal-board .app-personal-board-body .app-personal-board-box .app-personal-board-box-name{
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+.app-boards-container .app-personal-board .app-personal-board-body .app-personal-board-box .app-personal-board-box-fav{}
+.app-boards-container .app-personal-board .app-personal-board-body .app-personal-board-box .app-personal-board-box-fav button{
+  border:none;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.app-boards-container .app-personal-board .app-personal-board-body .app-personal-board-box .app-personal-board-box-fav button:hover{
+  color: yellow;
+  background-color: rgba(0,0,0,.14);
+}

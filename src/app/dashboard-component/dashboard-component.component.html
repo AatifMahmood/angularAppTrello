@@ -1,18 +1,16 @@
+<div class="row m-0">
+  <mat-sidenav-container class="col-12 dashboard-container p-0">
+  <mat-sidenav #leftDrawer class="col-12 col-md-3 dashboard-drawer-container" mode="over" position="start">start
+    <div class="dashboard-leftDrawer">
+      <div class="dhas">
 
-<mat-drawer-container class="dashboard-container" autosize>
-  <mat-drawer #drawer class="col-12 col-md-6 col-lg-3 p-0" mode="over" position="end">
-  <div class="dashboard-sidenav-close text-right">
-    <button (click)="drawer.toggle()" mat-button><i class="material-icons">clear</i></button>
-  </div>
-  <div class="dashboard-sidenav-profile text-center">
-    <ul class="p-0">
-      <li><img src="./assets/images/profile.jpg" alt="profile" class="img-fluid"></li>
-      <li>Aatif Mahmood</li>
-    </ul>
-  </div>
-  </mat-drawer>
-
-  <div class="row m-0">
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav #rightDrawer class="col-12 col-md-3 dashboard-drawer-container" mode="over" position="end">end</mat-sidenav>
+    <div class="dashboard-leftDrawer-toggler">
+      <button mat-fab (click)="leftDrawer.toggle()"><i class="material-icons">keyboard_arrow_right</i></button>
+    </div>
     <div class="dashboard-wrapper col-12 p-0">
       <div class="dashboard-nav">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -20,9 +18,12 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+              <li class="nav-item dashboard-nav-navbar-input">
+                <span class="input-group-append"><i class="material-icons">search</i></span>
+                <input matInput type="search" name="search">
+              </li>
               <li class="nav-item">
                 <button mat-button><i class="material-icons">explore</i></button>
               </li>
@@ -30,7 +31,7 @@
                 <button mat-button><i class="material-icons">mail_outline</i></button>
               </li>
               <li class="nav-item">
-                <button mat-button (click)="drawer.toggle()"><i class="material-icons">account_circle</i></button>
+                <button mat-button (click)="rightDrawer.toggle()"><i class="material-icons">account_circle</i></button>
               </li>
               <li class="nav-item">
                 <button mat-button><i class="material-icons">exit_to_app</i></button>
@@ -39,6 +40,14 @@
           </div>
         </nav>
       </div>
+      <app-allboards-component></app-allboards-component>
     </div>
-  </div>
-</mat-drawer-container>
+    <div class="dashboard-footer">
+      <ul class="nav">
+        <li class="nav-item">Design & Devlope by: Aatif Mahmood</li>
+        <li class="nav-item">Version 1.0</li>
+        <li class="nav-item">Contact : <a href="mailto:atifali.7220@gmail.com">atifali.7220@gmail.com</a></li>
+      </ul>
+    </div>
+  </mat-sidenav-container>
+</div>

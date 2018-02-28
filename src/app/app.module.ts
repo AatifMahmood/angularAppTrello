@@ -12,11 +12,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { AllboardsComponentComponent } from './allboards-component/allboards-component.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponentComponent,
-    DashboardComponentComponent
+    DashboardComponentComponent,
+    AllboardsComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -4,17 +4,31 @@
   background-color: #F5F5F5;
   overflow:hidden;
 }
+.dashboard-container /deep/ .mat-drawer-content{
+  overflow: hidden;
+}
 .dashboard-container /deep/ .mat-drawer-backdrop.mat-drawer-shown{
   background: #ffffff;
 }
 .dashboard-container .dashboard-drawer-container{
   background: linear-gradient(#812FE8,#2B19AF);
 }
+.dashboard-container .dashboard-drawer-container .dashboard-drawer-btn{
+}
+.dashboard-container .dashboard-drawer-container .dashboard-drawer-btn button{
+  padding: 10px;
+  color: #ffffff;
+  background-color: transparent;
+}
+.dashboard-container .dashboard-drawer-container .dashboard-drawer-btn button /deep/ .mat-button-focus-overlay{
+  background-color: transparent;
+}
 .dashboard-container .dashboard-leftDrawer{}
 .dashboard-container .dashboard-leftDrawer-toggler{
   position: absolute;
   top:50%;
   left:-30px;
+  transform:translateY(-28px);
   background-color: transparent;
   z-index:10;
 }
@@ -30,10 +44,36 @@
 .dashboard-container .dashboard-leftDrawer-toggler /deep/ .mat-button-wrapper{
   padding:0;
 }
+.dashboard-container .dashboard-rightDrawer{}
+.dashboard-container .dashboard-rightDrawer .dashboard-rightDrawer-profile{}
+.dashboard-container .dashboard-rightDrawer .dashboard-rightDrawer-profile .dashboard-rightDrawer-profile-img{
+  border:5px solid #ffffff;
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.dashboard-container .dashboard-rightDrawer .dashboard-rightDrawer-profile .dashboard-rightDrawer-profile-text{
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 5px 0;
+}
+.dashboard-container .dashboard-rightDrawer .dashboard-rightDrawer-profile .dashboard-rightDrawer-profile-text button{
+  border:none;
+  color: #ffffff;
+  background-color: transparent;
+  transition: .3s all;
+  cursor: pointer;
+}
+.dashboard-container .dashboard-rightDrawer .dashboard-rightDrawer-profile .dashboard-rightDrawer-profile-text button:hover{
+  background-color: rgba(0,0,0,.05);
+}
 .dashboard-wrapper{
-  overflow-y: auto;
-  max-height: 100vh;
+  /*overflow-y: auto;*/
+  /*max-height: 100vh;*/
   padding: 50px 0;
+  overflow: hidden;
 }
 .dashboard-wrapper .dashboard-nav .navbar{
   /*background: linear-gradient(to right, #2B19AF, #812FE8);*/
@@ -68,6 +108,7 @@
   border-radius: 50px;
   max-height: 36px;
   margin: 7px;
+  display:flex;
 }
 .dashboard-wrapper .dashboard-nav .navbar .navbar-nav .nav-item.dashboard-nav-navbar-input span{
   display: inline-block;
@@ -95,4 +136,16 @@
   padding:5px;
   border-right: 1px solid #dddddd;
   font-size: 11px;
+}
+/deep/ .ng-scrollbar{
+  /*background-color: #812FE8;*/
+  box-shadow: inset 0 0 0 2px #812FE8;
+  border-radius: 10px!important;
+  width:10px!important;
+}
+/deep/ .-vertical .ng-scrollbar-thumb{
+  background-color: #812FE8;
+}
+/deep/ .ng-scrollbar-thumb:hover, /deep/ .ng-scrollbar-thumb:active{
+  background-color: #2B19AF!important;
 }

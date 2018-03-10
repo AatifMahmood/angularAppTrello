@@ -1,19 +1,38 @@
 <div class="row m-0">
   <mat-sidenav-container class="col-12 dashboard-container p-0">
-  <mat-sidenav #leftDrawer class="col-12 col-md-3 dashboard-drawer-container" mode="over" position="start">start
+  <mat-sidenav #leftDrawer class="col-12 col-md-5 col-lg-3 p-0 dashboard-drawer-container" mode="over" position="start">
+    <div class="dashboard-drawer-btn text-right">
+      <button mat-button (click)="leftDrawer.toggle()"><i class="fas fa-arrow-left fa-2x"></i></button>
+    </div>
     <div class="dashboard-leftDrawer">
-      <div class="dhas">
-
+    </div>
+  </mat-sidenav>
+  <mat-sidenav #rightDrawer class="col-12 col-md-5 col-lg-3 p-0 dashboard-drawer-container" mode="over" position="end">
+    <div class="dashboard-drawer-btn text-left">
+      <button mat-button (click)="rightDrawer.toggle()"><i class="fas fa-arrow-right fa-2x"></i></button>
+    </div>
+    <div class="dashboard-rightDrawer">
+      <div class="dashboard-rightDrawer-profile">
+        <ul class="list-unstyled p-0 text-center">
+          <li>
+            <div class="dashboard-rightDrawer-profile-img rounded-circle">
+              <img src="../assets/images/profile.jpg" alt="profile" class="img-fluid">
+            </div>
+          </li>
+          <li class="dashboard-rightDrawer-profile-text">
+            Aatif Mahmood&nbsp;
+            <button matTooltip="Edit Profile"><i class="far fa-edit"></i></button>
+          </li>
+        </ul>
       </div>
     </div>
   </mat-sidenav>
-  <mat-sidenav #rightDrawer class="col-12 col-md-3 dashboard-drawer-container" mode="over" position="end">end</mat-sidenav>
     <div class="dashboard-leftDrawer-toggler">
       <button mat-fab (click)="leftDrawer.toggle()"><i class="material-icons">keyboard_arrow_right</i></button>
     </div>
     <div class="dashboard-wrapper col-12">
       <div class="dashboard-nav fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-md navbar-light">
           <a class="navbar-brand" href="#">KANBAN</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,13 +53,15 @@
                 <button mat-button (click)="rightDrawer.toggle()"><i class="material-icons">account_circle</i></button>
               </li>
               <li class="nav-item">
-                <button mat-button><i class="material-icons">exit_to_app</i></button>
+                <button mat-button matTooltip="Logout" routerLink="/login"><i class="material-icons">exit_to_app</i></button>
               </li>
             </ul>
           </div>
         </nav>
       </div>
-      <app-allboards-component></app-allboards-component>
+      <ng-scrollbar style="height: 90vh;">
+        <app-allboards-component></app-allboards-component>
+      </ng-scrollbar>
     </div>
     <div class="dashboard-footer fixed-bottom">
       <ul class="nav">
